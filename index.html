@@ -641,7 +641,7 @@ button.upd-item:hover .upd-text{text-decoration:underline}
         </span>
       </button>
 
-      <button class="card reveal" data-cat="sherpur" data-title="হাতির আতঙ্কে আধাপাকা ধান কাটছেন কৃষকেরা" data-slug="hatir-atongke-adhapaka-dhan-katchen-krishokera" data-pub="2026-11-17T19:30:00+06:00"
+      <button class="card reveal" data-cat="sherpur" data-title="হাতির আতঙ্কে আধাপাকা ধান কাটছেন কৃষকেরা" data-slug="hatir-atongke-adhapaka-dhan-katchen-krishokera" data-pub="2026-11-17T19:30:00+06:00" data-link="https://facebook.com/100090275546418/posts/pfbid02cnRhmZuRXqyhoQfaYWZZMaTNo4m3SqfeN71D7PdTGRYC81VW1tJKP59KFYxoNPMUl/"
         data-desc="শেরপুরের নালিতাবাড়ী উপজেলার সীমান্তবর্তী গারো পাহাড় এলাকায় বন্যহাতির আতঙ্কে কৃষকেরা নির্ধারিত সময়ের আগেই আধাপাকা আমন ধান কেটে ঘরে তুলছেন। মাঠে আমন ধান পাকতে শুরু করলেও হাতির পাল কখন হানা দেয়, সেই আশঙ্কায় তাঁরা লোকসান মেনে নিয়েই আগাম ধান কাটছেন।
 
 স্থানীয় সূত্রে জানা গেছে, উপজেলার রামচন্দ্রকুড়া, নয়াবিল ও পোড়াগাঁও ইউনিয়নের বিস্তীর্ণ পাহাড়ি এলাকায় এবার আমন ধানের আবাদ হয়েছে। সন্ধ্যা নামলেই খাবারের সন্ধানে পাহাড় থেকে লোকালয় ও ফসলি জমিতে নেমে আসছে বন্যহাতির পাল। ইতোমধ্যে কয়েক দফায় ধানখেতে হানা দিয়ে ধান খেয়ে ও পায়ের নিচে মাড়িয়ে ব্যাপক ক্ষতি করেছে হাতির দল।
@@ -1610,6 +1610,8 @@ button.upd-item:hover .upd-text{text-decoration:underline}
     var m=/^#news-(.+)$/.exec(location.hash||'');
     if(!m)return;
     var slug=m[1], i, el;
+    var aliases={'hati-atanke-dhan-kata-nalitabari':'hatir-atongke-adhapaka-dhan-katchen-krishokera'};
+    if(aliases[slug])slug=aliases[slug];
     function slugMatch(s){return s===slug||s===('news-'+slug)}
     for(i=0;i<cards.length;i++){if(slugMatch(cards[i].dataset.slug)){openCard(cards[i]);return}}
     var frames=document.querySelectorAll('.js-frame');
