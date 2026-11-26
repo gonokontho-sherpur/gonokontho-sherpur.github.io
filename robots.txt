@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gonokontho-sherpur.github.io/sitemap.xml
