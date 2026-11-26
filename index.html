@@ -488,6 +488,13 @@ button.upd-item:hover .upd-text{text-decoration:underline}
   .live-card{width:calc(100% - 24px);margin-top:-40px;padding:15px 16px 13px}
   .live-panel{padding:16px 16px 8px}
 }
+
+/* Adsterra ad slots */
+.ad-label{font-size:.72rem;font-weight:600;color:var(--ink2);letter-spacing:.06em;text-align:center;margin-bottom:6px}
+.ad-banner{margin:24px 0 0}
+.ad-banner-viewport{width:100%;overflow:hidden;height:calc(60px * min(1,(100vw - 24px)/468))}
+.ad-banner-scale{width:468px;height:60px;margin:0 auto;transform:scale(min(1,(100vw - 24px)/468));transform-origin:top center}
+.ad-native{margin:26px 0 0}
 </style>
 </head>
 <body>
@@ -573,6 +580,25 @@ button.upd-item:hover .upd-text{text-decoration:underline}
       </div>
     </div>
   </header>
+
+  <!-- AD: Adsterra banner 468x60, below the header, above the news list -->
+  <div class="ad-banner">
+    <div class="ad-label">বিজ্ঞাপন</div>
+    <div class="ad-banner-viewport">
+      <div class="ad-banner-scale">
+<script>
+atOptions = {
+'key' : 'd373022f4a5dbb46d14b1b0e2b2e5c8e',
+'format' : 'iframe',
+'height' : 60,
+'width' : 468,
+'params' : {}
+};
+</script>
+<script data-cfasync="false" src="https://bicea.org/22/d373022f4a5dbb46d14b1b0e2b2e5c8e"></script>
+      </div>
+    </div>
+  </div>
 
   <!-- LATEST -->
   <section id="latest">
@@ -1078,6 +1104,12 @@ button.upd-item:hover .upd-text{text-decoration:underline}
       
             
 </div>
+    <!-- AD: Adsterra native banner, static slot right below the news feed (kept outside #newsGrid so filter/pagination re-renders never wipe it) -->
+    <div class="ad-native">
+      <div class="ad-label">বিজ্ঞাপন</div>
+<script async fetchpriority="high" data-cfasync="false" src="https://bicea.org/21/c10e229ce4930b910eccec4616e99ed4"></script>
+<div id="container-c10e229ce4930b910eccec4616e99ed4"></div>
+    </div>
     <div class="empty" id="emptyState">এই ক্যাটাগরিতে কোনো খবর পাওয়া যায়নি। অন্য ক্যাটাগরি দেখুন, অথবা ফেসবুক পেজে সর্বশেষ পোস্টগুলো দেখুন।</div>
     <nav class="pager" id="pager" aria-label="খবরের পেজ নম্বর"></nav>
     <p class="pager-info" id="pagerInfo"></p>
@@ -1898,5 +1930,7 @@ button.upd-item:hover .upd-text{text-decoration:underline}
   };
 })();
 </script>
+<!-- AD: Adsterra social bar -->
+<script data-cfasync="false" src="https://bicea.org/14/c772b3c2abb31cb3c3eb55e07382b2e1"></script>
 </body>
 </html>
